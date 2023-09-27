@@ -1,7 +1,8 @@
+import 'package:agenda/screens/home.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -162,6 +163,12 @@ class Home extends StatelessWidget {
                     bottom: -30,
                     right: 30,
                     child: Container(
+                     child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (_) => Home()));
+                      },
+                       ),
                       padding: const EdgeInsets.all(22),
                       height: 60,
                       width: 60,
@@ -178,8 +185,11 @@ class Home extends StatelessWidget {
                             begin: FractionalOffset.topLeft,
                             end: FractionalOffset.bottomRight),
                         shape: BoxShape.circle,
-                      ),
-                      child: Image.asset('assets/seta-direita.png'),
+                        
+                      ),  
+                      
+                    //  child: Image.asset('assets/seta-direita.png'),
+                     
                     ),
                   ),
                 ],
