@@ -38,7 +38,7 @@ class Welcome extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 29,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w200,
                       ),
                     )
                   ],

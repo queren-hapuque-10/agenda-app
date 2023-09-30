@@ -1,3 +1,4 @@
+import 'package:agenda/ui/usuarios.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -161,25 +162,33 @@ class Home extends StatelessWidget {
                   Positioned(
                     bottom: -30,
                     right: 30,
-                    child: Container(
-                      padding: const EdgeInsets.all(22),
-                      height: 60,
-                      width: 60,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [
-                  Color.fromARGB(255, 255, 116, 172),
-                  Color.fromARGB(212, 179, 117, 223),
-                            ],
-                            stops: [
-                              0.0,
-                              1.0
-                            ],
-                            begin: FractionalOffset.topLeft,
-                            end: FractionalOffset.bottomRight),
-                        shape: BoxShape.circle,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const Usuarios()));
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(22),
+                        height: 60,
+                        width: 60,
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [
+                                Color.fromARGB(255, 255, 116, 172),
+                                Color.fromARGB(212, 179, 117, 223),
+                              ],
+                              stops: [
+                                0.0,
+                                1.0
+                              ],
+                              begin: FractionalOffset.topLeft,
+                              end: FractionalOffset.bottomRight),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset('assets/seta-direita.png'),
                       ),
-                      child: Image.asset('assets/seta-direita.png'),
                     ),
                   ),
                 ],
