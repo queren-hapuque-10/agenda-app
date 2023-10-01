@@ -1,4 +1,4 @@
-import 'package:agenda/ui/home.dart';
+import 'package:agenda/ui/login.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
@@ -53,7 +53,7 @@ class Welcome extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) => const Home()));
+                            MaterialPageRoute(builder: (_) => const Login()));
                       },
                       child: Container(
                         height: 50,
