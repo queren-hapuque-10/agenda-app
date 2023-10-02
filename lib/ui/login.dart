@@ -1,4 +1,4 @@
-import 'package:agenda/screens/home.dart';
+import 'package:agenda/tarefas/screens/home.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {

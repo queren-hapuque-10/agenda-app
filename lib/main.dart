@@ -1,6 +1,7 @@
 
 import 'package:agenda/contatos/home_page.dart';
-import 'package:agenda/screens/home.dart';
+import 'package:agenda/notas/screens/home.dart';
+import 'package:agenda/tarefas/screens/home.dart';
 import 'package:agenda/ui/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Agenda',
-      home: Welcome(),
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
