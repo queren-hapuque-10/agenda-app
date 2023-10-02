@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Lista de Contatos'),
-        backgroundColor:Color.fromARGB(255, 145, 112, 173),
+        backgroundColor:Color.fromARGB(255, 182, 87, 141),  
       ),
-      
+
       body: Padding(
 
 
@@ -40,16 +40,15 @@ class _HomePageState extends State<HomePage> {
               focusedBorder: OutlineInputBorder(
                borderSide: BorderSide(
                 width: 2,
-                color: Color.fromARGB(255, 190, 147, 255)),
+                color: Color.fromARGB(255, 255, 130, 201)),
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                 
                ),
                  
                   hintText: 'Nome',
                   border: OutlineInputBorder(
-                   // borderSide: BorderSide(),
                       borderRadius: BorderRadius.all( 
-                    Radius.circular(15),
+                    Radius.circular(17)
                   ))), 
             ),
             const SizedBox(height: 10,),
@@ -64,13 +63,14 @@ class _HomePageState extends State<HomePage> {
               focusedBorder: OutlineInputBorder(
                borderSide: BorderSide(
                 width: 2,
-                color: Color.fromARGB(255, 190, 147, 255)),
+                color: Color.fromARGB(255, 255, 130, 201)),
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                ),
                   hintText: 'Número',
                   border: OutlineInputBorder(
+                   
                   borderRadius: BorderRadius.all(
-                    Radius.circular(15),
+                    Radius.circular(17),
                   ))),
             ),
             const SizedBox(height: 10,),
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 82, 62, 160)),
+                    backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 228, 133, 187)),
                   ),
                     onPressed: () {
                       //
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                     child: const Text('Salvar')),
                 ElevatedButton(
                    style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll( Color.fromARGB(211, 114, 69, 145),),
+                    backgroundColor: MaterialStatePropertyAll(Color.fromARGB(255, 149, 115, 244),),
                   ),
                     onPressed: () {
                       //
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor:
-              index % 2 == 0 ? Colors.deepPurpleAccent : Colors.purple,
+              index % 2 == 0 ? const Color.fromARGB(255, 149, 115, 244) : Color.fromARGB(255, 228, 133, 187),
           foregroundColor: Colors.white,
           child: Text(
             contacts[index].name[0],
@@ -180,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                     });
                     //
                   }),
-                  child: const Icon(Icons.delete, color: Color.fromARGB(255, 236, 91, 91),)),
+                  child: const Icon(Icons.delete, color: Color.fromARGB(255, 220, 117, 117),)),
             ],
           ),
         ),

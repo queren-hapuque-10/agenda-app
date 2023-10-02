@@ -9,6 +9,13 @@ class EditScreen extends StatefulWidget {
   @override
   State<EditScreen> createState() => _EditScreenState();
 }
+class EditNota extends StatelessWidget {
+  const EditNota({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+  return EditScreen();
+  }
+}
 
 class _EditScreenState extends State<EditScreen> {
   TextEditingController _titleController = TextEditingController();
@@ -28,7 +35,7 @@ class _EditScreenState extends State<EditScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 219, 192, 212),
+      backgroundColor: Color.fromARGB(255, 245, 238, 243),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
         child: Column(children: [
@@ -44,7 +51,7 @@ class _EditScreenState extends State<EditScreen> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 141, 124, 136).withOpacity(.8),
+                        color: Color.fromARGB(255, 233, 125, 168).withOpacity(.8),
                         borderRadius: BorderRadius.circular(10)),
                     child: const Icon(
                       Icons.arrow_back_ios_new,
@@ -58,16 +65,16 @@ class _EditScreenState extends State<EditScreen> {
             children: [
               TextField(
                 controller: _titleController,
-                style: const TextStyle(color: Colors.white, fontSize: 30),
+                style: const TextStyle(color: Color.fromARGB(255, 58, 58, 58), fontSize: 30),
                 decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Título',
-                    hintStyle: TextStyle(color: Color.fromARGB(255, 235, 235, 235), fontSize: 30)),
+                    hintStyle: TextStyle(color: Color.fromARGB(255, 113, 113, 113), fontSize: 30)),
               ),
               TextField(
                 controller: _contentController,
                 style: const TextStyle(
-                  color: Colors.white,
+                  color: Color.fromARGB(255, 58, 58, 58),
                 ),
                 maxLines: null,
                 decoration: const InputDecoration(
@@ -88,7 +95,7 @@ class _EditScreenState extends State<EditScreen> {
         },
         elevation: 10,
         backgroundColor: Color.fromARGB(255, 233, 125, 168),
-        child: const Icon(Icons.save),
+        child: const Icon(Icons.save_as_outlined),
       ),
     );
   }

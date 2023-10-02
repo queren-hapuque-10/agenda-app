@@ -21,7 +21,7 @@ class ToDoItem extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 20),
       child: ListTile(
         onTap: () {
-          // print('Clicked on Todo Item.');
+     
           onToDoChanged(todo);
         },
         shape: RoundedRectangleBorder(

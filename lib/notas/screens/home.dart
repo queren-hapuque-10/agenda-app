@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 219, 192, 212),
+      backgroundColor: Color.fromARGB(255, 245, 238, 243),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
         child: Column(
@@ -71,7 +71,8 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 const Text(
                   'Bloco de Notas',
-                  style: TextStyle(fontSize: 30, color: Color.fromARGB(255, 255, 255, 255)),
+                  style: TextStyle(fontSize: 30, color: Color.fromARGB(255, 104, 103, 104), fontWeight: FontWeight.w600,  ), 
+                  
                 ),
                 IconButton(
                     onPressed: () {
@@ -84,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 40,
                       height: 40,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 185, 57, 142).withOpacity(.8),
+                          color: Color.fromARGB(255, 205, 107, 146).withOpacity(.8),
                           borderRadius: BorderRadius.circular(10)),
                       child: const Icon(
                         Icons.sort,
@@ -98,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             TextField(
               onChanged: onSearchTextChanged,
-              style: const TextStyle(fontSize: 16, color: Colors.white),
+              style: const TextStyle(fontSize: 16, color: Color.fromARGB(255, 64, 64, 64)),
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),
                 hintText: "Pesquisar...",
@@ -246,10 +247,10 @@ class _HomeScreenState extends State<HomeScreen> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            backgroundColor: Colors.grey.shade900,
+            backgroundColor: Color.fromARGB(255, 180, 91, 150),
             icon: const Icon(
               Icons.info,
-              color: Colors.grey,
+              color: Color.fromARGB(255, 247, 244, 244),
             ),
             title: const Text(
               'Deseja excluir?',
@@ -263,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.pop(context, true);
                       },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green),
+                          backgroundColor: Color.fromARGB(255, 209, 161, 241)),
                       child: const SizedBox(
                         width: 60,
                         child: Text(
@@ -277,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.pop(context, false);
                       },
                       style:
-                          ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                          ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 240, 113, 179)),
                       child: const SizedBox(
                         width: 60,
                         child: Text(

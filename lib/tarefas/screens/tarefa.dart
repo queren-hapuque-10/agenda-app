@@ -1,30 +1,18 @@
-import 'package:agenda/ui/login.dart';
-import 'package:agenda/ui/welcome.dart';
+import 'package:agenda/tarefas/constants/colors.dart';
+import 'package:agenda/tarefas/model/todo.dart';
+import 'package:agenda/tarefas/widgets/todo_item.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import '../model/todo.dart';
-import '../constants/colors.dart';
-import '../widgets/todo_item.dart';
-
-class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+class Tarefa extends StatefulWidget {
+  const Tarefa({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Tarefa> createState() => _TarefaState();
 }
 
-class Tarefas extends StatelessWidget {
-  const Tarefas({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Home();
-  }
-}
-
-
-class _HomeState extends State<Home> {
-  final todosList = ToDo.todoList();
+class _TarefaState extends State<Tarefa> {
+   final todosList = ToDo.todoList();
   List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
 
@@ -33,17 +21,13 @@ class _HomeState extends State<Home> {
     _foundToDo = todosList;
     super.initState();
   }
-
-  int _opcaoSelecionada = 0;
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: tdBGColor,
       appBar: _buildAppBar(),
-      body: Stack(
 
+      body: Stack(
         children: [
           Container(
             padding: EdgeInsets.symmetric(
@@ -62,10 +46,11 @@ class _HomeState extends State<Home> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'Todas as tarefas',
-                          style: TextStyle(
+                          'Todas as Tarefas',
+                          style: GoogleFonts.poppins(
                             fontSize: 30,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w300,
+                            color: tdRed
                             
                           ),
                         ),
@@ -113,6 +98,7 @@ class _HomeState extends State<Home> {
                     decoration: InputDecoration(
                         hintText: 'Adicionar nova tarefa',
                         border: InputBorder.none),
+                        style: GoogleFonts.poppins(),
                   ),
                 ),
               ),
@@ -141,39 +127,10 @@ class _HomeState extends State<Home> {
             ]),
           ),
         ],
-      ),
-      
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _opcaoSelecionada, 
-          fixedColor: Color.fromARGB(255, 255, 56, 123),
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
-
-          onTap: (opcao) {
-            print("clicou $opcao");
-
-            setState(() {
-              _opcaoSelecionada = opcao;
-            });
-          },
-
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.toc_rounded),
-              label: 'Tarefas',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.contact_page_outlined),
-              label: 'Contatos',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.note_alt_outlined),
-              label: 'Notas',
-            ),
-          ]),  
-    );
+      ),);
   }
 
-  void _handleToDoChange(ToDo todo) {
+   void _handleToDoChange(ToDo todo) {
     setState(() {
       todo.isDone = !todo.isDone;
     });
@@ -220,6 +177,7 @@ class _HomeState extends State<Home> {
         borderRadius: BorderRadius.circular(20),
       ),
       child: TextField(
+        style: GoogleFonts.poppins(),
         onChanged: (value) => _runFilter(value),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(0),
@@ -233,25 +191,25 @@ class _HomeState extends State<Home> {
             minWidth: 25,
           ),
           border: InputBorder.none,
-          hintText: 'Pesquisar',
+          hintText: 'Pesquisar...',
           hintStyle: TextStyle(color: tdGrey),
         ),
       ),
     );
+    
   }
 
-  AppBar _buildAppBar() {
+      AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: tdBGColor,
       elevation: 0,
       title: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-        Container (
+        Container(
           height: 50,
           width: 50,
-          child: ClipRRect( 
-              
+          child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: Image.asset('assets/ordem-de-servico.png'),
+            child: Image.asset('assets/logo-a.png'),
           ),
         ),
       ]),

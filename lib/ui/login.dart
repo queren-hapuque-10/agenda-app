@@ -1,4 +1,4 @@
-import 'package:agenda/tarefas/screens/home.dart';
+import 'package:agenda/menu.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -167,7 +167,7 @@ class Login extends StatelessWidget {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (_) => Home()));
+                                builder: (_) => Agenda()));
                       },
 
                     child: Container(
