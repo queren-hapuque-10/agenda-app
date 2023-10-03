@@ -44,12 +44,13 @@ class _MenuState extends State<Menu> {
           fixedColor: Color.fromARGB(255, 245, 109, 154),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           onTap: (opcao) {
-            print("clicou $opcao");
+          //  print("clicou $opcao");
 
             setState(() {
               _opcaoSelecionada = opcao;
             });
           },
+          
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.toc_rounded),
@@ -63,7 +64,8 @@ class _MenuState extends State<Menu> {
               icon: Icon(Icons.note_alt_outlined),
               label: 'Notas',
             ),
-          ]),
+          ]
+    ),
     );
   }
 

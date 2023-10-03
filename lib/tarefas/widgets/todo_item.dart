@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../model/todo.dart';
 import '../constants/colors.dart';
@@ -55,7 +56,7 @@ class ToDoItem extends StatelessWidget {
             iconSize: 12,
             icon: Icon(Icons.delete),
             onPressed: () {
-              // print('Clicked on delete icon');
+            
               onDeleteItem(todo.id);
             },
           ),
