@@ -23,29 +23,31 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color.fromARGB(255, 245, 238, 243),
       appBar: _buildAppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             const SizedBox(
               height: 10,
-              //child: Text("Contatos", style: TextStyle(fontSize: 30, color: Colors.pink)),
+          
             ),
             TextField(
               controller: nameController,
-              decoration: const InputDecoration(
+              decoration:  InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
-                        width: 2, color: Color.fromARGB(255, 255, 130, 201)),
+                    width: 2, color: Color.fromARGB(255, 254, 130, 179)),
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                   ),
-                  hintText: 'Nome',
+                  hintText: 'Ex: Maria José',
+                  hintStyle: GoogleFonts.poppins( fontSize: 12),
+
                   enabledBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       borderSide: BorderSide(
                         width: 2,
-                        color: Color.fromARGB(255, 174, 122, 220),
+                        color: Color.fromARGB(211, 114, 69, 145),
                       ))),
             ),
             const SizedBox(
@@ -55,21 +57,23 @@ class _HomePageState extends State<HomePage> {
               controller: contactController,
               keyboardType: TextInputType.number,
               maxLength: 11,
-              decoration: const InputDecoration(
+              decoration:  InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(
-                        width: 2, color: Color.fromARGB(255, 255, 130, 201)),
+                        width: 2, color:Color.fromARGB(255, 254, 130, 179)),
                     borderRadius: BorderRadius.all(Radius.circular(15)),
                   ),
-                  hintText: 'Número',
+                  hintText: '(00) 0 0000-0000',
+                  hintStyle: GoogleFonts.poppins( fontSize: 12),
+
                   enabledBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
                       borderSide: BorderSide(
-                          color: Color.fromARGB(255, 174, 122, 220),
+                          color: Color.fromARGB(211, 114, 69, 145),
                           width: 2))),
             ),
             const SizedBox(
@@ -81,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(
-                          Color.fromARGB(255, 228, 133, 187)),
+                          Color.fromARGB(255, 254, 130, 179)),
                     ),
                     onPressed: () {
                       //
@@ -97,13 +101,14 @@ class _HomePageState extends State<HomePage> {
 
                       //
                     },
-                    child: const Text('Salvar')),
+                    child: Text('Salvar', style: GoogleFonts.poppins(),)),
                 ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(
-                        Color.fromARGB(255, 149, 115, 244),
+                        Color.fromARGB(211, 114, 69, 145),
                       ),
                     ),
+
                     onPressed: () {
                       //
                       String name = nameController.text.trim();
@@ -118,22 +123,22 @@ class _HomePageState extends State<HomePage> {
                         });
                       }
                       
-                      
-                      //
                     },
-                    child: const Text('Editar'),),
+                    child:  Text('Editar', style: GoogleFonts.poppins(),),),
               ],
             ),
             Row(
-              mainAxisSize: MainAxisSize.min,
+             mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  'Todos os Contatos',
+                  'Contatos',
                   style: GoogleFonts.poppins(
-                    fontSize: 30,
-                    color: Color.fromARGB(255, 255, 59, 114),
-                    fontWeight: FontWeight.w300,
+                    fontSize: 20,
+                    color: Color.fromARGB(255, 254, 130, 179),
+                    fontWeight: FontWeight.w400,
                     height: 3,
+
+                  
                   ),
                 ),
               ],
@@ -164,12 +169,12 @@ class _HomePageState extends State<HomePage> {
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: index % 2 == 0
-              ? const Color.fromARGB(255, 149, 115, 244)
-              : Color.fromARGB(255, 228, 133, 187),
+              ? Color.fromARGB(211, 114, 69, 145)
+              : Color.fromARGB(255, 254, 130, 179),
           foregroundColor: Colors.white,
           child: Text(
             contacts[index].name[0],
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
           ),
         ),
         title: Column(
@@ -177,7 +182,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             Text(
               contacts[index].name,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
             ),
             Text(contacts[index].contact),
           ],
@@ -198,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: const Icon(
                     Icons.edit,
-                    color: Color.fromARGB(255, 77, 213, 129),
+                    color: Color.fromARGB(211, 114, 69, 145),
                   )),
               InkWell(
                   onTap: (() {
@@ -210,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                   }),
                   child: const Icon(
                     Icons.delete,
-                    color: Color.fromARGB(255, 220, 117, 117),
+                    color:Color.fromARGB(255, 254, 130, 179),
                   )),
             ],
           ),
@@ -221,10 +226,20 @@ class _HomePageState extends State<HomePage> {
 
   _buildAppBar() {
     return AppBar(
+
       titleTextStyle: TextStyle(),
       backgroundColor: Color.fromARGB(255, 245, 238, 243),
       elevation: 0,
-      title: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+      title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Text("Lista de Contatos", 
+        style: GoogleFonts.poppins(
+          fontSize: 25,
+          fontWeight: FontWeight.w400,
+          color:Color.fromARGB(255, 254, 130, 179),
+          height: 3
+        ),
+        ),
+       
         Container(
           height: 50,
           width: 50,

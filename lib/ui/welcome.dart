@@ -1,5 +1,6 @@
 import 'package:agenda/ui/login.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -33,12 +34,12 @@ class Welcome extends StatelessWidget {
                       'assets/letra-a (2).png',
                       width: 130,
                     ),
-                    const Text(
+                     Text(
                       'Agenda 2023',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 29,
                         color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.w200,
+                        fontWeight: FontWeight.w300,
                       ),
                     )
                   ],
@@ -61,10 +62,10 @@ class Welcome extends StatelessWidget {
                           color: Color.fromARGB(255, 255, 255, 255),
                           borderRadius: BorderRadius.all(Radius.circular(30)),
                         ),
-                        child: const Center(
+                        child:  Center(
                           child: Text(
                             'Iniciar',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
                               color: Color.fromARGB(211, 114, 69, 145),

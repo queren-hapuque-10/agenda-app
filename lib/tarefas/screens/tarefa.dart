@@ -46,11 +46,12 @@ class _TarefaState extends State<Tarefa> {
                           bottom: 20,
                         ),
                         child: Text(
-                          'Todas as Tarefas',
+                          'Tarefas',
                           style: GoogleFonts.poppins(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w300,
-                            color: tdRed
+                            fontSize: 25,
+                            fontWeight: FontWeight.w400,
+                            color: tdRed,
+                           
                             
                           ),
                         ),
@@ -85,7 +86,7 @@ class _TarefaState extends State<Tarefa> {
                     color: Colors.white,
                     boxShadow: const [
                       BoxShadow(
-                        color: Colors.grey,
+                        color: Color.fromARGB(255, 247, 167, 199),
                         offset: Offset(0.0, 0.0),
                         blurRadius: 10.0,
                         spreadRadius: 0.0,
@@ -203,7 +204,16 @@ class _TarefaState extends State<Tarefa> {
     return AppBar(
       backgroundColor: tdBGColor,
       elevation: 0,
-      title: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+      title: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+       Text("Lista de Tarefas", 
+        style: GoogleFonts.poppins(
+          fontSize: 25,
+          fontWeight: FontWeight.w400,
+          color:Color.fromARGB(255, 254, 130, 179),
+          height: 3
+        ),
+        ),
+       
         Container(
           height: 50,
           width: 50,

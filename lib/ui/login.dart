@@ -1,5 +1,6 @@
 import 'package:agenda/menu.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -22,9 +23,9 @@ class Login extends StatelessWidget {
             SizedBox(
               width: 150,
               child: RichText(
-                  text: const TextSpan(
+                  text: TextSpan(
                       text: 'Minha',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 32,
                         color: Color.fromARGB(211, 114, 69, 145),
                         fontWeight: FontWeight.bold,
@@ -32,7 +33,7 @@ class Login extends StatelessWidget {
                       children: <TextSpan>[
                     TextSpan(
                         text: ' Agenda 2023',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           color: Color.fromARGB(255, 255, 116, 172),
                         ))
                   ])),
@@ -58,12 +59,12 @@ class Login extends StatelessWidget {
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  const Positioned(
+                   Positioned(
                     top: 10,
                     left: 20,
                     child: Text(
                       'Faça o Login',
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
@@ -83,9 +84,9 @@ class Login extends StatelessWidget {
                               Container(
                                 padding: const EdgeInsets.only(left: 10),
                                 width: 300,
-                                child: const TextField(
+                                child:  TextField(
                                   cursorColor: Colors.grey,
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color: Colors.black54,
                                   ),
                                   decoration: InputDecoration(
@@ -118,10 +119,10 @@ class Login extends StatelessWidget {
                               Container(
                                 padding: const EdgeInsets.only(left: 10),
                                 width: 300,
-                                child: const TextField(
+                                child:  TextField(
                                   obscureText: true,
                                   cursorColor: Colors.grey,
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     color: Colors.black54,
                                     fontSize: 20,
                                     letterSpacing: 1.4,
@@ -149,10 +150,10 @@ class Login extends StatelessWidget {
                         width: size.width * .8,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
+                          children: [
                             Text(
                               'Criar Conta',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 color: Colors.black54,
                               ),
                             ),

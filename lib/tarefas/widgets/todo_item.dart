@@ -36,7 +36,7 @@ class ToDoItem extends StatelessWidget {
         ),
         title: Text(
           todo.todoText!,
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontSize: 16,
             color: tdBlack,
             decoration: todo.isDone ? TextDecoration.lineThrough : null,

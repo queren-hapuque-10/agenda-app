@@ -12,7 +12,7 @@ class ToDo {
   static List<ToDo> todoList() {
     return [
       
-      ToDo(id: '01', todoText: 'Primeira tarefa', isDone: true,),
+      ToDo(id: '01', todoText: 'Primeira Tarefa', isDone: true,),
 
     ];
   }

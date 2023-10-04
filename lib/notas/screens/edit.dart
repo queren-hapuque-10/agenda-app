@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../models/note.dart';
 
@@ -51,7 +52,7 @@ class _EditScreenState extends State<EditScreen> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 233, 125, 168).withOpacity(.8),
+                        color: Color.fromARGB(255, 254, 130, 179).withOpacity(.8),
                         borderRadius: BorderRadius.circular(10)),
                     child: const Icon(
                       Icons.arrow_back_ios_new,
@@ -65,7 +66,7 @@ class _EditScreenState extends State<EditScreen> {
             children: [
               TextField(
                 controller: _titleController,
-                style: const TextStyle(color: Color.fromARGB(255, 58, 58, 58), fontSize: 30),
+                style:  GoogleFonts.poppins(color: Color.fromARGB(255, 58, 58, 58), fontSize: 30),
                 decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Título',
@@ -73,16 +74,17 @@ class _EditScreenState extends State<EditScreen> {
               ),
               TextField(
                 controller: _contentController,
-                style: const TextStyle(
+                style: GoogleFonts.poppins(
                   color: Color.fromARGB(255, 58, 58, 58),
                 ),
                 maxLines: null,
                 decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Digite aqui',
-                    hintStyle: TextStyle(
-                      color: Colors.grey,
-                    )),
+                    hintStyle:TextStyle(
+                    color: Colors.grey, 
+                    ),
+                    ),
               ),
             ],
           ))
@@ -94,7 +96,7 @@ class _EditScreenState extends State<EditScreen> {
               context, [_titleController.text, _contentController.text]);
         },
         elevation: 10,
-        backgroundColor: Color.fromARGB(255, 233, 125, 168),
+        backgroundColor: Color.fromARGB(255, 254, 130, 179),
         child: const Icon(Icons.save_as_outlined),
       ),
     );
