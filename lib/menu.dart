@@ -1,6 +1,8 @@
 import 'package:agenda/contatos/home_page.dart';
 import 'package:agenda/notas/screens/home.dart';
+import 'package:agenda/perfil/perfil.dart';
 import 'package:agenda/tarefas/screens/tarefa.dart';
+import 'package:agenda/ui/welcome.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatefulWidget {
@@ -26,12 +28,17 @@ class _MenuState extends State<Menu> {
   PaginaSelecionada(int index) {
     switch (index) {
       case 0:
-        return Tarefa();
+        return Perfil();
       case 1:
-        return HomePage();
+        return Tarefa();
       case 2:
+        return HomePage();
+
+        case 3:
         return HomeScreen();
-    }
+
+        
+            }
   }
 
   @override
@@ -52,18 +59,23 @@ class _MenuState extends State<Menu> {
           },
           
           items: [
+             BottomNavigationBarItem(
+              icon: Icon(Icons.person_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
+              label: 'Perfil',
+            ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.toc_rounded, color:Color.fromARGB(211, 114, 69, 145) ),
+              icon: Icon(Icons.edit_calendar_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
               label: 'Tarefas',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.contact_page_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
+              icon: Icon(Icons.perm_contact_cal_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
               label: 'Contatos',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.note_alt_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
               label: 'Notas',
             ),
+            
           ]
     ),
     );

@@ -1,5 +1,6 @@
 import 'package:agenda/contatos/home_page.dart';
 import 'package:agenda/notas/screens/home.dart';
+import 'package:agenda/perfil/perfil.dart';
 import 'package:agenda/ui/welcome.dart';
 import 'package:flutter/material.dart';
 

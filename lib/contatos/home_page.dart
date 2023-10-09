@@ -1,5 +1,4 @@
 import 'package:agenda/contatos/contact.dart';
-import 'package:agenda/notas/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,6 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // o campo de texto atualiza o valor e o controlador notifica seus ouvintes. 
   TextEditingController nameController = TextEditingController();
   TextEditingController contactController = TextEditingController();
   List<Contact> contacts = List.empty(growable: true);
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                           Color.fromARGB(255, 254, 130, 179)),
                     ),
                     onPressed: () {
-                      //
+                     
                       String name = nameController.text.trim();
                       String contact = contactController.text.trim();
                       if (name.isNotEmpty && contact.isNotEmpty) {
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                         });
                       }
 
-                      //
+                   
                     },
                     child: Text('Salvar', style: GoogleFonts.poppins(),)),
                 ElevatedButton(
@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     onPressed: () {
-                      //
+                    
                       String name = nameController.text.trim();
                       String contact = contactController.text.trim();
                       if (name.isNotEmpty && contact.isNotEmpty) {

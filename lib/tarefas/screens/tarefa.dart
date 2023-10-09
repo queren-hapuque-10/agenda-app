@@ -51,7 +51,7 @@ class _TarefaState extends State<Tarefa> {
                             fontSize: 25,
                             fontWeight: FontWeight.w400,
                             color: tdRed,
-                           
+                     
                             
                           ),
                         ),
@@ -97,7 +97,7 @@ class _TarefaState extends State<Tarefa> {
                   child: TextField(
                     controller: _todoController,
                     decoration: InputDecoration(
-                        hintText: 'Adicionar nova tarefa',
+                        hintText: 'Adicionar nova Tarefa',
                         border: InputBorder.none),
                         style: GoogleFonts.poppins(),
                   ),
