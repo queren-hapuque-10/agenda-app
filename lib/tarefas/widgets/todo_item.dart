@@ -30,6 +30,7 @@ class ToDoItem extends StatelessWidget {
         ),
         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         tileColor: Colors.white,
+        hoverColor:Color.fromARGB(255, 255, 255, 255),
         leading: Icon(
           todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,
           color: tdBlue,

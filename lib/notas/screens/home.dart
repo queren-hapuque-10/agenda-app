@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),
                hintText: "Pesquisar...",
               hintStyle: GoogleFonts.poppins(color: Colors.grey),
-      
+       hoverColor: Color.fromARGB(210, 248, 238, 254),
                 prefixIcon: const Icon(
                   Icons.search,
                   color: Colors.grey,

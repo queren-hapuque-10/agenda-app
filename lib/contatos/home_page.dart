@@ -42,12 +42,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                   hintText: 'Ex: Maria José',
                   hintStyle: GoogleFonts.poppins( fontSize: 12),
+                  hoverColor: Color.fromARGB(210, 248, 238, 254),
 
                   enabledBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       borderSide: BorderSide(
                         width: 2,
                         color: Color.fromARGB(211, 114, 69, 145),
+                        
                       ))),
             ),
             const SizedBox(
@@ -56,7 +58,7 @@ class _HomePageState extends State<HomePage> {
             TextField(
               controller: contactController,
               keyboardType: TextInputType.number,
-              maxLength: 11,
+              maxLength: 16,
               decoration:  InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
@@ -67,6 +69,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   hintText: '(00) 0 0000-0000',
                   hintStyle: GoogleFonts.poppins( fontSize: 12),
+                  hoverColor: Color.fromARGB(210, 248, 238, 254),
 
                   enabledBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.all(

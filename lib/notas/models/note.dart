@@ -37,21 +37,21 @@ List<Note> sampleNotes = [
   ),
    Note(
     id: 3,
-    title: 'Nota 03',
+    title: 'Nota 04',
     content:
         'Descrição 03',
     modifiedTime: DateTime(2023,3,1,19,5),
   ),
    Note(
     id: 4,
-    title: 'Nota 03',
+    title: 'Nota 05',
     content:
         'Descrição 03',
     modifiedTime: DateTime(2023,3,1,19,5),
   ),
    Note(
     id: 5,
-    title: 'Nota 03',
+    title: 'Nota 06',
     content:
         'Descrição 03',
     modifiedTime: DateTime(2023,3,1,19,5),

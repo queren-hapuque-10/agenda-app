@@ -24,7 +24,7 @@ class Perfil extends StatelessWidget {
               width: 200,
               child: RichText(
                   text: TextSpan(
-                      text: 'Bem-vinda,  ',
+                      text: 'Bem-Vinda,  ',
                       style: GoogleFonts.poppins(
                         fontSize: 30,
                         color: Color.fromARGB(211, 114, 69, 145),

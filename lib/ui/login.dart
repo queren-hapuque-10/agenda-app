@@ -1,3 +1,4 @@
+import 'package:agenda/cadastro/cadastro.dart';
 import 'package:agenda/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -79,7 +80,7 @@ class Login extends StatelessWidget {
                             children: [
                               const Icon(
                                 Icons.mail_outline,
-                                color: Colors.grey,
+                                color: Color.fromARGB(255, 250, 160, 196),
                               ),
                               Container(
                                 padding: const EdgeInsets.only(left: 10),
@@ -114,7 +115,7 @@ class Login extends StatelessWidget {
                             children: [
                               const Icon(
                                 Icons.key_outlined,
-                                color: Colors.grey,
+                                color: Color.fromARGB(255, 250, 160, 196),
                               ),
                               Container(
                                 padding: const EdgeInsets.only(left: 10),
@@ -146,6 +147,13 @@ class Login extends StatelessWidget {
                   Positioned(
                       top: 180,
                       left: 20,
+                      child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => Cadastro()));
+                      },
                       child: SizedBox(
                         width: size.width * .8,
                         child: Row(
@@ -159,7 +167,7 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                      )),
+                      ),)),
                   Positioned(
                     bottom: -30,
                     right: 30,

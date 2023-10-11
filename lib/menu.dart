@@ -48,8 +48,11 @@ class _MenuState extends State<Menu> {
       body: PaginaSelecionada(_opcaoSelecionada),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _opcaoSelecionada,
-          fixedColor:Color.fromARGB(211, 114, 69, 145),
+          fixedColor:Color.fromARGB(255, 254, 130, 179),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
+          showUnselectedLabels: true,
+          unselectedItemColor:Color.fromARGB(211, 114, 69, 145),
+         
           onTap: (opcao) {
          //   print("clicou $opcao");
 
@@ -60,19 +63,19 @@ class _MenuState extends State<Menu> {
           
           items: [
              BottomNavigationBarItem(
-              icon: Icon(Icons.person_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
+              icon: Icon(Icons.person_outlined, ),
               label: 'Perfil',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.edit_calendar_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
+              icon: Icon(Icons.edit_calendar_outlined, ),
               label: 'Tarefas',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.perm_contact_cal_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
+              icon: Icon(Icons.perm_contact_cal_outlined,),
               label: 'Contatos',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.note_alt_outlined, color:Color.fromARGB(211, 114, 69, 145) ),
+              icon: Icon(Icons.note_alt_outlined,),
               label: 'Notas',
             ),
             

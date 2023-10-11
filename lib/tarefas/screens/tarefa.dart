@@ -100,6 +100,8 @@ class _TarefaState extends State<Tarefa> {
                         hintText: 'Adicionar nova Tarefa',
                         border: InputBorder.none),
                         style: GoogleFonts.poppins(),
+                        cursorColor: const Color.fromARGB(255, 254, 130, 179),
+                        
                   ),
                 ),
               ),
@@ -176,17 +178,20 @@ class _TarefaState extends State<Tarefa> {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
+      
       ),
       child: TextField(
         style: GoogleFonts.poppins(),
         onChanged: (value) => _runFilter(value),
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(0),
+          contentPadding: EdgeInsets.all(0),   
           prefixIcon: Icon(
             Icons.search_rounded,
             color: tdBlack,
-            size: 17,
-          ),
+            size: 17, 
+         
+          ), 
+        
           prefixIconConstraints: BoxConstraints(
             maxHeight: 18,
             minWidth: 25,
@@ -194,7 +199,9 @@ class _TarefaState extends State<Tarefa> {
           border: InputBorder.none,
           hintText: 'Pesquisar...',
           hintStyle: TextStyle(color: tdGrey),
-        ),
+         
+
+        ),cursorColor: const Color.fromARGB(255, 254, 130, 179),
       ),
     );
     
