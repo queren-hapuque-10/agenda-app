@@ -52,6 +52,7 @@ class _MenuState extends State<Menu> {
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
           showUnselectedLabels: true,
           unselectedItemColor:Color.fromARGB(211, 114, 69, 145),
+          
          
           onTap: (opcao) {
          //   print("clicou $opcao");
@@ -81,6 +82,7 @@ class _MenuState extends State<Menu> {
             
           ]
     ),
+    
     );
   }
 

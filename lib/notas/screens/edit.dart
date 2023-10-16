@@ -71,6 +71,7 @@ class _EditScreenState extends State<EditScreen> {
                     border: InputBorder.none,
                     hintText: 'Título',
                     hintStyle: TextStyle(color: Color.fromARGB(255, 113, 113, 113), fontSize: 30)),
+                    cursorColor: const Color.fromARGB(255, 254, 130, 179),
               ),
               TextField(
                 controller: _contentController,
@@ -83,8 +84,10 @@ class _EditScreenState extends State<EditScreen> {
                     hintText: 'Digite aqui',
                     hintStyle:TextStyle(
                     color: Colors.grey, 
+
                     ),
                     ),
+                    cursorColor: const Color.fromARGB(255, 254, 130, 179),
               ),
             ],
           ))

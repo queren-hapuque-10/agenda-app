@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   hintText: 'Ex: Maria José',
                   hintStyle: GoogleFonts.poppins( fontSize: 12),
-                  hoverColor: Color.fromARGB(210, 248, 238, 254),
+                 hoverColor:Color.fromARGB(255, 255, 255, 255),
 
                   enabledBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
                         color: Color.fromARGB(211, 114, 69, 145),
                         
                       ))),
+                      cursorColor: const Color.fromARGB(255, 254, 130, 179),
             ),
             const SizedBox(
               height: 10,
@@ -69,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   hintText: '(00) 0 0000-0000',
                   hintStyle: GoogleFonts.poppins( fontSize: 12),
-                  hoverColor: Color.fromARGB(210, 248, 238, 254),
+                 hoverColor:Color.fromARGB(255, 255, 255, 255),
 
                   enabledBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.all(
@@ -78,6 +79,7 @@ class _HomePageState extends State<HomePage> {
                       borderSide: BorderSide(
                           color: Color.fromARGB(211, 114, 69, 145),
                           width: 2))),
+                          cursorColor: const Color.fromARGB(255, 254, 130, 179),
             ),
             const SizedBox(
               height: 10,

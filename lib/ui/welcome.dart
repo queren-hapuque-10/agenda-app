@@ -25,7 +25,7 @@ class Welcome extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                bottom: 350,
+                bottom: 260,
                 left: 0,
                 right: 0,
                 child: Column(

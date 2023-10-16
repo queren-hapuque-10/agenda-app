@@ -71,27 +71,34 @@ class _HomeScreenState extends State<HomeScreen> {
     
             TextField(
               onChanged: onSearchTextChanged,
-              style: const TextStyle(fontSize: 16, color: Color.fromARGB(255, 64, 64, 64)),
+              style: const TextStyle(fontSize: 16, color: Color.fromARGB(255, 64, 64, 64), ),
               decoration: InputDecoration(
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                
                hintText: "Pesquisar...",
               hintStyle: GoogleFonts.poppins(color: Colors.grey),
-       hoverColor: Color.fromARGB(210, 248, 238, 254),
+              
+              hoverColor: Color.fromARGB(210, 255, 255, 255),
+       
                 prefixIcon: const Icon(
                   Icons.search,
                   color: Colors.grey,
+                
                 ),
                 fillColor: const Color.fromARGB(255, 255, 255, 255),
                 filled: true,
                 focusedBorder: OutlineInputBorder(
+                  
                   borderRadius: BorderRadius.circular(30),
                   borderSide: const BorderSide(color: Colors.transparent),
                 ),
                 enabledBorder: OutlineInputBorder(
+                  
                   borderRadius: BorderRadius.circular(30),
                   borderSide: const BorderSide(color: Colors.transparent),
                 ),
               ),
+              cursorColor: const Color.fromARGB(255, 254, 130, 179),
             ),
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
