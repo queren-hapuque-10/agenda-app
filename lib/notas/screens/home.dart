@@ -266,7 +266,7 @@ class _HomeScreenState extends State<HomeScreen> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            backgroundColor:Color.fromARGB(255, 254, 130, 179),
+            backgroundColor:Color.fromARGB(227, 236, 186, 206),
             icon: const Icon(
               Icons.info,
               color: Color.fromARGB(255, 247, 244, 244),
@@ -284,7 +284,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.pop(context, true);
                       },
                       style: ElevatedButton.styleFrom(
-                     backgroundColor: Color.fromARGB(255, 246, 151, 189)),
+                     backgroundColor: Color.fromARGB(255, 255, 126, 178)),
+                     
                       child: SizedBox(
                         width: 60,
                         child: Text(
